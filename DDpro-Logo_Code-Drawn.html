@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DDpro 512 (System Sans, Thick Stroke)</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #0b0e12;
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="512"
+      height="512"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="DDpro logo 512x512"
+    >
+      <defs>
+        <!-- Disc -->
+        <radialGradient id="discGrad" cx="36%" cy="32%" r="70%">
+          <stop offset="0%" stop-color="#0f1720" />
+          <stop offset="55%" stop-color="#0a0d10" />
+          <stop offset="100%" stop-color="#040506" />
+        </radialGradient>
+
+        <!-- Ring gradient -->
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#d7ffff" />
+          <stop offset="45%" stop-color="#63f7ff" />
+          <stop offset="100%" stop-color="#18c7cd" />
+        </linearGradient>
+
+        <!-- Thin inner ring -->
+        <linearGradient id="thinRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#b7ffff" />
+          <stop offset="100%" stop-color="#63f7ff" />
+        </linearGradient>
+
+        <!-- Text fill gradient -->
+        <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#b7ffff" />
+          <stop offset="52%" stop-color="#5af6ff" />
+          <stop offset="100%" stop-color="#14cfd7" />
+        </linearGradient>
+      </defs>
+
+      <!-- Outer ring -->
+      <circle
+        cx="256"
+        cy="256"
+        r="214"
+        fill="none"
+        stroke="url(#ringGrad)"
+        stroke-width="44"
+      />
+
+      <!-- Inner thin ring -->
+      <circle
+        cx="256"
+        cy="256"
+        r="178"
+        fill="none"
+        stroke="url(#thinRingGrad)"
+        stroke-width="20"
+      />
+
+      <!-- Disc -->
+      <circle cx="256" cy="256" r="168" fill="url(#discGrad)" />
+
+      <!-- Text styles (universal heavy sans stack) -->
+      <style>
+        .ddfont {
+          font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+            Arial, sans-serif;
+          font-weight: 900;
+          font-stretch: normal;
+        }
+      </style>
+
+      <!-- DD -->
+      <text
+        class="ddfont"
+        x="256"
+        y="238"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-size="240"
+        letter-spacing="-18"
+        fill="url(#textGrad)"
+        stroke="rgba(0,0,0,0.38)"
+        stroke-width="6.5"
+        paint-order="stroke fill"
+      >
+        DD
+      </text>
+
+      <!-- pro -->
+      <text
+        class="ddfont"
+        x="256"
+        y="352"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-size="210"
+        letter-spacing="-12"
+        fill="url(#textGrad)"
+        stroke="rgba(0,0,0,0.38)"
+        stroke-width="6.5"
+        paint-order="stroke fill"
+      >
+        pro
+      </text>
+    </svg>
+  </body>
+</html>
